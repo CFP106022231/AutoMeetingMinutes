@@ -115,7 +115,7 @@ class MeetingAutomation:
 
     def automate_meetings_for_students(self, student_ids, nameID):
         for student_id in student_ids:
-            self.driver.get(f"https://igp.sen.edu.tw/igp/main/igpstudentlist/233/student/{student_id}/meetings")
+            self.driver.get(f"https://my-link/{student_id}/meetings")
             # 添加兩個不同日期的會議
             # self.add_meeting("IGP會議", "002023/08/31", nameID)
             # self.add_meeting("IGP會議", "002023/12/15", nameID)
@@ -131,11 +131,11 @@ if __name__ == "__main__":
     # 登入
     meeting_automation.login("cookiesfile.json", "MyID", "Mypwd")
     
-    meeting_automation.driver.get("https://igp.sen.edu.tw/igp/main/igpstudentlist/233/student/14136/meetings")
+    meeting_automation.driver.get("https://my link")
 
     # 學生編號和參與會議名單
     student_ids = [str(i) for i in range(14136, 14137)] #網頁中的學生編號
-    nameID = meeting_automation.read_meeting_map('/Users/hsinyu/Desktop/others.txt')#替換成參與會議名單
+    nameID = meeting_automation.read_meeting_map('others.txt')#替換成參與會議名單
 
     # 自動化會議
     meeting_automation.automate_meetings_for_students(student_ids, nameID)
