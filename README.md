@@ -1,3 +1,5 @@
+[hackmd notes](https://hackmd.io/@hsinyuyuuu/HJZ9GH-_p)
+
 1. **自動化腳本：**
    - 撰寫了基本的自動化腳本，能夠登入網站、填寫會議紀錄等。
 
